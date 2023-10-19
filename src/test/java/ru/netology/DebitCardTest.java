@@ -40,13 +40,13 @@ public class DebitCardTest {
         }
 
         @Test
-        public void shouldTestV2() {
+        public void shouldFulForm() {
             //WebElement form = driver.findElement(By.cssSelector("[data-test-id=callback-form]"));
             driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иван");
-            driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79195271734");
+            driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79450001408");
             driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
-            driver.findElement(By.cssSelector("button.button]")).click();
-            var actualText = driver.findElement(By.className("[data-test-id=order-success]")).getText().trim();
+            driver.findElement(By.cssSelector("button.button")).click();
+            var actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
             assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actualText);
         }
     }
